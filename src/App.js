@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useSelector } from "react-redux";
 
-function App() {
+import { isEmpty } from "./components/Utils";
+import Header from "./components/Header";
+import Card from "./components/Card";
+import "./styles/index.css";
+
+const App = () => {
+  const products = useSelector((state) => state.productReducer);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <div className="container">
+        {/* <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Enfant />} />
+          <Route path="/" element={<Ado />} />
+          <Route path="/" element={<Bebe />} />
+          <Route path="/" element={<Homme />} />
+          <Route path="/" element={<Femme />} />
+        </Routes> */}
+        <div className="container flex flex-wrap">
+          {!isEmpty(products) &&
+            products.map((product, index) => (
+              <Card product={product} key={index} />
+            ))}
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
