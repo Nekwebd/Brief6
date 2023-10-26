@@ -94,3 +94,52 @@ li:hover{
 li:focus{
     background-color: grey;
 }
+
+.form-container {
+    padding: 1em;
+}
+input, textarea {
+    border: darkgrey 2px solid;
+    border-radius: 9px;
+    width: 250px;
+    height: 50px;
+}
+
+input .input, textarea .input{
+    background-color: gray;
+    color: black;
+}
+div.card button {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+}
+span.buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1em;
+    padding: .5em;
+}
+
+span.buttons .edit {
+    width: 25px;
+    height: 20px;
+    border: black solid 1px;
+    border-radius: 12px;
+    background-color: darkgrey;
+}
+span.buttons .delete {
+    width: 25px;
+    height: 20px;
+    border: black solid 1px;
+    border-radius: 12px;
+    background-color: darkgrey;
+
+}
+
+span.buttons :hover {
+    background-color: blanchedalmond;
+}

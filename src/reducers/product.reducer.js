@@ -18,7 +18,12 @@ export default function productReducer(state = initialState, action) {
         if (product.id === action.payload.id) {
           return {
             ...product,
-            content: action.payload.content,
+            title: action.payload.title,
+            description: action.payload.description,
+            categories: action.payload.categories,
+            basePrice: action.payload.basePrice,
+            salePrice: action.payload.salePrice,
+            imageUrl: action.payload.imageUrl,
           };
         } else return product;
       });

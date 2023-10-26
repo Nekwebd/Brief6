@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { isEmpty } from "./components/Utils";
 import Header from "./components/Header";
 import Card from "./components/Card";
+import Form from "./components/Form";
 import "./styles/index.css";
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/" element={<Femme />} />
         </Routes> */}
         <div className="container flex flex-wrap">
+          <Form />
           {!isEmpty(products) &&
             products.map((product, index) => (
               <Card product={product} key={index} />
@@ -30,6 +32,7 @@ const App = () => {
       </div>
     </div>
   );
+  // filterproduct = product.filter
 };
 
 export default App;
