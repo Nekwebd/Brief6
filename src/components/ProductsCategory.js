@@ -26,12 +26,10 @@ function CategoryProducts({ category }) {
   );
 
   return (
-    <div className="card">
-      {!isEmpty(categoryProducts) &&
-        categoryProducts.map((product, index) => (
-          <Card product={product} key={index} />
-        ))}
-    </div>
+    !isEmpty(categoryProducts) &&
+    categoryProducts.map((product, index) => (
+      <Card product={product} key={index} />
+    ))
   );
 }
 

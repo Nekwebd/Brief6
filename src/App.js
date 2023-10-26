@@ -4,12 +4,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./styles/index.css";
 import Header from "./components/Header";
-import Hommes from "./pages/Homme";
-import Femmes from "./pages/Femme";
-import Ados from "./pages/Ado";
-import Enfants from "./pages/Enfant";
+import Template from "./pages/Template";
 import Home from "./pages/Home";
-import Bébés from "./pages/Bebe";
 const App = () => {
   const products = useSelector((state) => state.productReducer);
 
@@ -19,11 +15,11 @@ const App = () => {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/Hommes" element={<Hommes />} />
-          <Route path="/Femmes" element={<Femmes />} />
-          <Route path="/Enfants" element={<Enfants />} />
-          <Route path="/Ados" element={<Ados />} />
-          <Route path="/Bébés" element={<Bébés />} />
+          <Route path="/Hommes" element={<Template category="Hommes" />} />
+          <Route path="/Femmes" element={<Template category="Femmes" />} />
+          <Route path="/Enfants" element={<Template category="Enfants" />} />
+          <Route path="/Ados" element={<Template category="Ados" />} />
+          <Route path="/Bébés" element={<Template category="Bébés" />} />
         </Routes>
       </BrowserRouter>
     </div>
