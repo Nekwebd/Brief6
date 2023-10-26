@@ -1,5 +1,16 @@
 import React from "react";
+import ProductsCategory from "../components/ProductsCategory";
+import Form from "../components/Form";
 
-export default function Enfant() {
-  return <div>Enfant</div>;
+function Enfants() {
+  return (
+    <div className="container">
+      <div className="container flex flex-wrap">
+        <Form />
+        <ProductsCategory category="Enfants" />
+      </div>
+    </div>
+  );
 }
+
+export default Enfants;

@@ -1,38 +1,33 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { isEmpty } from "./components/Utils";
-import Header from "./components/Header";
-import Card from "./components/Card";
-import Form from "./components/Form";
 import "./styles/index.css";
-
+import Header from "./components/Header";
+import Hommes from "./pages/Homme";
+import Femmes from "./pages/Femme";
+import Ados from "./pages/Ado";
+import Enfants from "./pages/Enfant";
+import Home from "./pages/Home";
+import Bébés from "./pages/Bebe";
 const App = () => {
   const products = useSelector((state) => state.productReducer);
 
   return (
     <div className="App">
-      <Header />
-      <div className="container">
-        {/* <Routes>
+      <BrowserRouter>
+        <Header />
+        <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/" element={<Enfant />} />
-          <Route path="/" element={<Ado />} />
-          <Route path="/" element={<Bebe />} />
-          <Route path="/" element={<Homme />} />
-          <Route path="/" element={<Femme />} />
-        </Routes> */}
-        <div className="container flex flex-wrap">
-          <Form />
-          {!isEmpty(products) &&
-            products.map((product, index) => (
-              <Card product={product} key={index} />
-            ))}
-        </div>
-      </div>
+          <Route path="/Hommes" element={<Hommes />} />
+          <Route path="/Femmes" element={<Femmes />} />
+          <Route path="/Enfants" element={<Enfants />} />
+          <Route path="/Ados" element={<Ados />} />
+          <Route path="/Bébés" element={<Bébés />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
-  // filterproduct = product.filter
 };
 
 export default App;

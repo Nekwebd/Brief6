@@ -100,13 +100,7 @@ const Card = ({ product }) => {
             <h2 className="text-center">{product.title}</h2>
             <p className="text-center">{product.description}</p>
             <p className="text-center">{product.categories}</p>
-            <img
-              className="justify-center"
-              src={product.imageUrl}
-              alt={product.title}
-              width="60px"
-              height="60px"
-            ></img>
+            <img src={product.imageUrl} alt={product.title}></img>
             <span className="prices">
               <p className="text-center">Base Price : {product.basePrice}€</p>
               <p className="text-center">Sale Price : {product.salePrice}€</p>

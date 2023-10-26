@@ -36,7 +36,11 @@
     display:flex;
     gap: 1em;
 }
-img {
+div.card img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1;
     border: .5px solid grey;
     border-radius: 1em;
     width: 120px;
@@ -71,7 +75,7 @@ ul {
     justify-content: center;
     align-items: center;
 }
-a{
+Link{
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,18 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <div className="header">
-      <a href="/" className="site-title">
+      <Link to="/" className="site-title">
         ShopTendance
-      </a>
+      </Link>
       <nav className="nav">
         <ul>
-          <li href="/products/categories/bebe">Bébé</li>
-          <li href="/products/categories/enfant">Enfant</li>
-          <li href="/products/categories/ado">Adolescent</li>
-          <li href="/products/categories/femme">Femme</li>
-          <li href="/products/categories/enfant">Homme</li>
+          <li>
+            <Link to="/Bébés">Bébés</Link>
+          </li>
+          <li>
+            <Link to="/Enfants">Enfants</Link>
+          </li>
+          <li>
+            <Link to="/Ados">Ados</Link>
+          </li>
+          <li>
+            <Link to="/Femmes">Femmes</Link>
+          </li>
+          <li>
+            <Link to="/Hommes">Hommes</Link>
+          </li>
         </ul>
       </nav>
     </div>

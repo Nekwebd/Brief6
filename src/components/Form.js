@@ -68,7 +68,7 @@ const Form = () => {
           <input
             className="text-center input"
             type="text"
-            value="https://img.freepik.com/free-photo/happy-asian-woman-with-candid-smile-pink-dress-posing-summer-garden_273443-645.jpg?w=740&t=st=1697705353~exp=1697705953~hmac=cb25c622db0f8754c9ac7afdb120026c4ceaccd9c3f061424e4b2a287b64e219"
+            defaultValue="https://img.freepik.com/free-photo/happy-asian-woman-with-candid-smile-pink-dress-posing-summer-garden_273443-645.jpg?w=740&t=st=1697705353~exp=1697705953~hmac=cb25c622db0f8754c9ac7afdb120026c4ceaccd9c3f061424e4b2a287b64e219"
           />
           <input type="submit" value="Envoyer" />
         </div>
